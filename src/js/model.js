@@ -5,7 +5,7 @@ import { MIN_VALUE, MAX_VALUE, INITIAL_SCORE, INITIAL_HIGHSCORE } from "./config
 export const state = {
   minValue: MIN_VALUE,
   maxValue: MAX_VALUE,
-  randomNumber: 10,
+  randomNumber: null,
   userNumber: null,
   score: INITIAL_SCORE,
   highscore: INITIAL_HIGHSCORE,
@@ -66,7 +66,7 @@ const getLocalStorage = function () {
 };
 
 const init = function () {
-  // state.randomNumber = getRandomNumber(state.minValue, state.maxValue);
+  state.randomNumber = getRandomNumber(state.minValue, state.maxValue);
   getLocalStorage();
 };
 
